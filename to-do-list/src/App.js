@@ -1,9 +1,9 @@
 import "./App.css";
-import List from "./List";
+import List1 from "./List1";
 function App() {
   return (
     <div className="App">
-      <List></List>
+      <List1></List1>
     </div>
   );
 }
