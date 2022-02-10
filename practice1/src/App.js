@@ -1,7 +1,8 @@
 import "./App.css";
 // import ClickCounter from "./components/ClickCounter";
 import ClickCounterOne from "./components/ClickCounterOne";
-import { HoverCounterTwo } from "./components/HoverCounterTwo.1";
+import HOverCounterTwo from "./components/HOverCounterTwo";
+import User from "./components/User";
 // import HOverCounter from "./components/HOverCounter";
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
       <HOverCounter></HOverCounter> */}
 
       <ClickCounterOne></ClickCounterOne>
-      <HoverCounterTwo></HoverCounterTwo>
+      <HOverCounterTwo></HOverCounterTwo>
+      <User name={(isLoggedIn) => (isLoggedIn ? "User" : "guest")}></User>
     </div>
   );
 }
