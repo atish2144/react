@@ -23,11 +23,11 @@ class List extends Component {
         <input type="text" onChange={this.saveInput} />
         <button onClick={this.addNewItem}> Add Item </button>
 
-        <ol>
+        {/* <ol>
           {this.state.cart.map((subItems, sIndex) => {
             return <li key={sIndex}> {subItems}</li>;
           })}
-        </ol>
+        </ol> */}
       </div>
     );
   }
