@@ -1,0 +1,20 @@
+#input1 {
+  margin-top: 100px;
+  width: 200px;
+  height: 25px;
+}
+
+#btn1 {
+  margin-left: 10px;
+  width: 200 px;
+  height: 30px;
+}
+
+.list1 {
+  margin-bottom: 25px;
+  margin-right: 10px;
+}
+
+.del-btn {
+  margin-left: 10px;
+}
