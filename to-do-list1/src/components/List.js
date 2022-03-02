@@ -9,7 +9,7 @@ class List extends Component {
   //   arr1.push({});
   //   alert(this.state.arr1);
   state = {
-    cart: ["abc"],
+    cart: [],
   };
 
   saveInput = (e) => {
