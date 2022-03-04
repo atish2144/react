@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 
 function List() {
   const [input, setInput] = useState("");
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(
+    JSON.parse(localStorage.getItem("item")) || []
+  );
 
   // useEffect(() => {
   //   const counterFromLc = localStorage.getItem("items");

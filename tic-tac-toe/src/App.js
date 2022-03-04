@@ -6,7 +6,7 @@ function App() {
     <div className="app-header">
       <p className="heading-text">Tic Tac Toe</p>
       <div className="row jc-center">
-        <SquareComponent className=".b-bottom-right" />
+        <SquareComponent />
         <SquareComponent />
         <SquareComponent />
       </div>
