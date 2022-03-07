@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+  width: 100vw;
+  height: 100vf;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.Board {
+  width: 400px;
+  height: 400px;
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid black; */
+}
+
+.square {
+  flex: 33%;
+  height: 100%;
+  border: 1px solid black;
+  cursor: pointer;
+  display: grid;
+  font-size: 30px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
