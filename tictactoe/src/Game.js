@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import "./Game.css";
 
 function Game() {
@@ -7,6 +6,7 @@ function Game() {
   const [cells, setcells] = useState(Array(9).fill(""));
   const [winner, setwinner] = useState();
 
+  // let a = cells;
   const checkWinner = (squares) => {
     let combos = {
       accross: [
@@ -40,7 +40,31 @@ function Game() {
           squares[pattern[1]] === squares[pattern[2]]
         ) {
           setwinner(squares[pattern[0]]);
+          console.log("hii");
+          console.log(squares);
+        } else if (
+          squares[0] !== "" &&
+          squares[1] !== "" &&
+          squares[2] !== "" &&
+          squares[3] !== "" &&
+          squares[4] !== "" &&
+          squares[5] !== "" &&
+          squares[6] !== "" &&
+          squares[7] !== "" &&
+          squares[8] !== ""
+        ) {
+          setwinner(" Draw! No one  ");
         }
+        // else if (
+        //   ((squares[pattern[0]] === "" ||
+        //     squares[pattern[1]] === "" ||
+        //     squares[pattern[2]] === "") &&
+        //     squares[pattern[0]] === squares[pattern[1]] &&
+        //     squares[pattern[1]] === squares[pattern[2]]) ||
+        //   squares[pattern[1]] === squares[pattern[2]]
+        // ) {
+        //   setwinner(" Its a Draw !No one ");
+        // }
       });
     }
   };
@@ -74,38 +98,44 @@ function Game() {
   };
 
   return (
-    <div className="container">
-      <table>
-        Player - {Player}
-        <tbody>
-          <tr>
-            <Cell num={0} />
-            <Cell num={1} />
-            <Cell num={2} />
-          </tr>
+    <div>
+      <div className="title">Tic Tac Toe</div>
+      <br />
+      <br />
 
-          <tr>
-            <Cell num={3} />
-            <Cell num={4} />
-            <Cell num={5} />
-          </tr>
+      <div className="container">
+        <table>
+          Player - {Player}
+          <tbody>
+            <tr>
+              <Cell num={0} />
+              <Cell num={1} />
+              <Cell num={2} />
+            </tr>
 
-          <tr>
-            <Cell num={6} />
-            <Cell num={7} />
-            <Cell num={8} />
-          </tr>
-        </tbody>
-      </table>
-      <br></br>
-      {winner && (
-        <>
-          <p className="p1">{winner} is the winner</p>
-          <button className="btn1" onClick={() => restart()}>
-            Play again
-          </button>
-        </>
-      )}
+            <tr>
+              <Cell num={3} />
+              <Cell num={4} />
+              <Cell num={5} />
+            </tr>
+
+            <tr>
+              <Cell num={6} />
+              <Cell num={7} />
+              <Cell num={8} />
+            </tr>
+          </tbody>
+        </table>
+        <br></br>
+        {winner && (
+          <>
+            <p className="p1">{winner} is the winner</p>
+            <button className="btn1" onClick={() => restart()}>
+              Play Again
+            </button>
+          </>
+        )}
+      </div>
     </div>
   );
 }
