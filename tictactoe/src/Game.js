@@ -5,6 +5,7 @@ function Game() {
   const [Player, SetPlayer] = useState("X");
   const [cells, setcells] = useState(Array(9).fill(""));
   const [winner, setwinner] = useState();
+  // const [status, setStatus] = useState(false);
 
   // let a = cells;
   const checkWinner = (squares) => {
@@ -29,19 +30,22 @@ function Game() {
 
     for (let combo in combos) {
       combos[combo].forEach((pattern) => {
+        // console.log("pattern=", pattern[0]);
         if (
           squares[pattern[0]] === "" ||
           squares[pattern[1]] === "" ||
           squares[pattern[2]] === ""
         ) {
-          //
+          return;
+          // setStatus(true);
         } else if (
           squares[pattern[0]] === squares[pattern[1]] &&
           squares[pattern[1]] === squares[pattern[2]]
         ) {
           setwinner(squares[pattern[0]]);
-          console.log("hii");
-          console.log(squares);
+          // setStatus(true);
+          // console.log("hii");
+          // console.log(squares);
         } else if (
           squares[0] !== "" &&
           squares[1] !== "" &&
@@ -54,6 +58,7 @@ function Game() {
           squares[8] !== ""
         ) {
           setwinner(" Draw! No one  ");
+          console.log(squares[1]);
         }
         // else if (
         //   ((squares[pattern[0]] === "" ||
@@ -71,7 +76,7 @@ function Game() {
 
   const handleClick = (num) => {
     if (cells[num] !== "") {
-      alert("already clicked this staye try in another state");
+      // alert("already clicked this staye try in another state");
       return;
     }
     let squares = [...cells];
