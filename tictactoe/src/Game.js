@@ -4,7 +4,7 @@ import "./Game.css";
 function Game() {
   const [Player, SetPlayer] = useState("X");
   const [cells, setcells] = useState(Array(9).fill(""));
-  const [winner, setwinner] = useState();
+  const [winner, setwinner] = useState(null);
   // const [status, setStatus] = useState(false);
 
   // let a = cells;
@@ -15,13 +15,11 @@ function Game() {
         [3, 4, 5],
         [6, 7, 8],
       ],
-
       up: [
         [0, 3, 6],
         [1, 4, 7],
         [2, 5, 8],
       ],
-
       down: [
         [2, 4, 6],
         [0, 4, 8],
@@ -36,37 +34,39 @@ function Game() {
           squares[pattern[1]] === "" ||
           squares[pattern[2]] === ""
         ) {
-          return;
           // setStatus(true);
         } else if (
           squares[pattern[0]] === squares[pattern[1]] &&
           squares[pattern[1]] === squares[pattern[2]]
         ) {
           setwinner(squares[pattern[0]]);
+
           // setStatus(true);
           // console.log("hii");
-          // console.log(squares);
-        } else if (
-          squares[0] !== "" &&
-          squares[1] !== "" &&
-          squares[2] !== "" &&
-          squares[3] !== "" &&
-          squares[4] !== "" &&
-          squares[5] !== "" &&
-          squares[6] !== "" &&
-          squares[7] !== "" &&
-          squares[8] !== ""
-        ) {
+          console.log("squares=", squares);
+          console.log("Cells=", cells);
+        }
+        // squares[0] !== "" &&
+        // squares[1] !== "" &&
+        // squares[2] !== "" &&
+        // squares[3] !== "" &&
+        // squares[4] !== "" &&
+        // squares[5] !== "" &&
+        // squares[6] !== "" &&
+        // squares[7] !== "" &&
+        // squares[8] !== ""
+        else {
           setwinner(" Draw! No one  ");
-          console.log(squares[1]);
+
+          console.log(squares[0]);
         }
         // else if (
         //   ((squares[pattern[0]] === "" ||
         //     squares[pattern[1]] === "" ||
         //     squares[pattern[2]] === "") &&
-        //     squares[pattern[0]] === squares[pattern[1]] &&
-        //     squares[pattern[1]] === squares[pattern[2]]) ||
-        //   squares[pattern[1]] === squares[pattern[2]]
+        //     squares[pattern[0]] !== squares[pattern[1]] &&
+        //     squares[pattern[1]] !== squares[pattern[2]]) ||
+        //   squares[pattern[1]] !== squares[pattern[2]]
         // ) {
         //   setwinner(" Its a Draw !No one ");
         // }
@@ -107,7 +107,6 @@ function Game() {
       <div className="title">Tic Tac Toe</div>
       <br />
       <br />
-
       <div className="container">
         <table>
           Player - {Player}

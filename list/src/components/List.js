@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "../App.css";
 
 function List() {
   const [input, setInput] = useState("");
@@ -59,7 +60,7 @@ function List() {
       <ol>
         {items.map((itemval, index) => {
           return (
-            <li key={index}>
+            <li key={index} className="cs1">
               {itemval}
               <button onClick={() => deleteItems(index)} className="listItem">
                 x

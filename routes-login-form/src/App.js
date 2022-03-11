@@ -11,7 +11,7 @@ function App() {
   const [password, setpassword] = useState("123");
   const login = (props) => {
     if (username === "admin" && password === "123") {
-      alert("login successful");
+      // alert("login successful");
       console.log(username);
       console.log(password);
       // <link path="/Other"></link>;
@@ -44,5 +44,4 @@ function App() {
     </>
   );
 }
-
 export default App;

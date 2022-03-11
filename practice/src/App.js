@@ -1,12 +1,14 @@
 //import logo from "./logo.svg";
 import "./App.css";
-import LifeCylceA from "./LifeCylceA";
+import File from "./File";
+// import LifeCylceA from "./LifeCylceA";
 //import TextField from "./TextField";
 function App() {
   return (
     <div>
       {/* <TextField></TextField> */}
-      <LifeCylceA></LifeCylceA>
+      {/* <LifeCylceA></LifeCylceA> */}
+      <File></File>
     </div>
   );
 }
