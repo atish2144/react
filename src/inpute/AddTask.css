@@ -1,0 +1,114 @@
+.image1
+{
+    width: 100px;
+    height: 100px;
+}
+.labl1
+{
+    color: rgb(34, 180, 34);
+    font-size: 25px;
+}
+
+.addtask
+{
+    margin: 10px;
+    float: right;
+    background-color: rgb(20, 133, 95);
+}
+
+.card1
+{
+    width: 200px;
+    height:100px;
+    border : 1px solid black;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 25px;
+    background-color: aqua;
+}
+
+li
+{
+    list-style-type: none;
+}
+
+.deleteimage
+{
+    width: 20px;
+    height: 20px;
+    float: right;
+    float: bottom;
+    margin-right: 5px;
+    display: none;
+}
+
+.editimage
+{
+    width: 20px;
+    height: 20px;
+    float: right;
+    float: bottom;
+    margin-right:25px;
+    display: none;
+}
+
+.card1:hover .deleteimage
+{
+    display: block;
+}
+
+.card1:hover .editimage
+{
+    display: block;
+}
+/* 
+.completedbtn
+{
+    text-align: center;
+    margin-top: 380px;
+    position: fixed;
+    bottom:5px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+ .cmpltbtn
+{
+    position: fixed;
+    border-radius: 25px;
+    width: 190px;
+     top:80%;
+     left: 40%;
+     background-color: aqua;
+    /* float: inherit; */
+} 
+.cb1
+{
+    margin-right: 10px;
+    margin-left: 2px;
+}
+
+.cmpltdiv
+{
+
+    position: fixed;
+    border-radius: 25px;
+    width: 190px;
+     top:70%;
+     left: 45%;
+   
+    margin-bottom:100px;
+    /* background-color: aquamarine; */
+}
+
+.list1
+{
+    margin-bottom: 5px;
+}
+
+.list2
+{
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
